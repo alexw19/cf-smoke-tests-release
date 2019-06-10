@@ -9,6 +9,8 @@ export PATH=/var/vcap/packages/cf-cli-6-linux/bin:${PATH} # put the cli on the p
 export PATH=${GOPATH}/bin:${PATH}
 
 export CONFIG=/var/vcap/jobs/smoke_tests/config/config.json
+export http_proxy=<%= properties.smoke_tests.proxy %>
+export https_proxy=<%= properties.smoke_tests.proxy %>
 
 cd /var/vcap/packages/smoke_tests/src/github.com/cloudfoundry/cf-smoke-tests
 
